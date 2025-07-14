@@ -69,18 +69,9 @@ if st.button("🔍 Realizar predicción"):
             
         pred_codificada = modelo.predict(entrada)[0]
 
-        # Obtener descripción textual del nivel de deserción usando el diccionario cargado
-        pred_textual = dicc_desercion.get(pred_codificada, "Desconocido")
-
-        # Mostrar resultados
-        st.write(f"🔢 Número de Cluster: {pred_codificada}")
-        st.success(f"✅ Nivel de deserción predicho: **{pred_textual}**")
-
-    except Exception as e:
-        st.error(f"❌ Error durante la predicción: {e}")
-
-        #st.write(f"🔢 Número de Cluster:", pred_codificada)
-        #st.write(" Riesgo de deserción:", dicc_desercion.keys())
+        
+        st.write(f"🔢 Número de Cluster:", pred_codificada)
+        st.write(" Riesgo de deserción:", dicc_desercion.keys())
         #st.write("🧪 Tipo:", type(pred_codificada))
         #pred_original = dicc_desercion.get(str(pred_codificada), "Desconocido")
 
