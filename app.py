@@ -74,7 +74,7 @@ if st.button("🔍 Realizar predicción"):
         st.write(" Riesgo de deserción:", dicc_desercion.keys())
         #st.write("🧪 Tipo:", type(pred_codificada))
         #pred_original = dicc_desercion.get(str(pred_codificada), "Desconocido")
-
-        st.success(f"✅ Estado del aprendiz predicho: **{pred_original}**")
+        #st.success(f"✅ Estado del aprendiz predicho: **{pred_original}**")
+    
     except Exception as e:
         st.error(f"❌ Error durante la predicción: {e}")
